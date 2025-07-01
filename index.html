@@ -4,8 +4,7 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="googlebot" content="noindex, nofollow">
   <meta name="bingbot" content="noindex, nofollow">
-  <meta name="Slurp" content="noindex, nofollow"> <!-- Yahoo -->
-  <meta name="DuckDuckBot" content="noindex, nofollow">
+  <meta name="Slurp" content="noindex, nofollow"> <meta name="DuckDuckBot" content="noindex, nofollow">
   <meta name="yandex" content="none">
   <meta name="baiduspider" content="noindex, nofollow">
   <meta charset="UTF-8">
@@ -14,59 +13,57 @@
   <title>𝘁𝘄𝗼𝗽𝟬𝗶𝗻𝘁𝗳𝗶𝘃𝗲の物語</title>
   <link rel="icon" href="images/twop0intfive.jpeg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/glitch.css">
+  <link rel="stylesheet" href="css/transitions.css">
 </head>
 <body class="scanlines">
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Language toggle -->
   <div class="lang-toggle">
     <button id="toggle-lang" aria-label="Toggle language">🇵🇷ES | 🇺🇸EN</button>
   </div>
 
   <header class="header">
     <div class="profile-container">
-      <img src="images/twop0intfive.jpeg" alt="Profile picture of twop0intfive" class="profile-picture">
+      <img src="images/twop0intfive.jpeg" alt="Profile picture of twop0intfive" id="profile-pic" class="profile-picture">
     </div>
   </header>
 
-  <main id="main-content">
-    <section id="content-en" lang="en">
-      <div class="cyber-terminal">
-        <h1 class="terminal-header">> SOCIAL_ACCESS // TWOP0INTFIVE // VERSION 2.5.0</h1>
-        <div class="terminal-links">
-          <div class="terminal-column">
-            <a href="https://www.twop0intfive.xyz/contact.html" class="command-line contact" aria-label="Contact Portal"><span class="icon" aria-hidden="true">📬</span> Contact Portal</a>
-            <a href="https://elbatey.twop0intfive.xyz" class="command-line garden" aria-label="Digital Garden"><span class="icon" aria-hidden="true">🌱</span> Digital Garden</a>
-            <a href="social.html" class="command-line mastodon" aria-label="Socials"><span class="icon" aria-hidden="true">🐘</span> Socials</a>
+  <div class="page-wrapper">
+    <main id="main-content">
+      <section id="content-en" lang="en">
+        <div class="cyber-terminal">
+          <h1 class="terminal-header">> SOCIAL_ACCESS // TWOP0INTFIVE // VERSION 2.5.0</h1>
+          <div class="terminal-links">
+            <div class="terminal-column">
+              <a href="contact.html" class="command-line contact" aria-label="Contact Portal"><span class="icon" aria-hidden="true">📬</span> Contact Portal</a>
+              <a href="https://elbatey.twop0intfive.xyz" class="command-line garden" aria-label="Digital Garden"><span class="icon" aria-hidden="true">🌱</span> Digital Garden</a>
+              <a href="social.html" class="command-line mastodon" aria-label="Socials"><span class="icon" aria-hidden="true">🐘</span> Socials</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="content-es" lang="es" style="display:none;">
-      <div class="cyber-terminal">
-        <h1 class="terminal-header">> ACCESO_SOCIAL // TWOP0INTFIVE // VERSIÓN 2.5.0</h1>
-        <div class="terminal-links">
-          <div class="terminal-column">
-            <a href="contact.html" class="command-line contact" aria-label="Portal de Contacto"><span class="icon" aria-hidden="true">📬</span> Portal de Contacto</a>
-            <a href="https://elbatey.twop0intfive.xyz" class="command-line garden" aria-label="Jardín Digital"><span class="icon" aria-hidden="true">🌱</span> Jardín Digital</a>
-            <a href="social.html" class="command-line mastodon" aria-label="Perfiles Sociales"><span class="icon" aria-hidden="true">🐘</span> Perfiles Sociales</a>
+      <section id="content-es" lang="es" style="display:none;">
+        <div class="cyber-terminal">
+          <h1 class="terminal-header">> ACCESO_SOCIAL // TWOP0INTFIVE // VERSIÓN 2.5.0</h1>
+          <div class="terminal-links">
+            <div class="terminal-column">
+              <a href="contact.html" class="command-line contact" aria-label="Portal de Contacto"><span class="icon" aria-hidden="true">📬</span> Portal de Contacto</a>
+              <a href="https://elbatey.twop0intfive.xyz" class="command-line garden" aria-label="Jardín Digital"><span class="icon" aria-hidden="true">🌱</span> Jardín Digital</a>
+              <a href="social.html" class="command-line mastodon" aria-label="Perfiles Sociales"><span class="icon" aria-hidden="true">🐘</span> Perfiles Sociales</a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
+  </div>
 
-  <!--<footer>
-    <p class="small-text">© 2025 twop0intfive. All rights reserved.</p>
-  </footer>-->
+  <script data-goatcounter="https://stats.twop0intfive.xyz/count" async src="//gc.zgo.at/count.js"></script>
+  
+  <script src="js/glitch.js"></script>
+  <script src="js/router.js"></script>
 
-  <!-- GoatCounter -->
-  <script data-goatcounter="https://stats.twop0intfive.xyz/count"
-    async src="//gc.zgo.at/count.js">
-  </script>
-
-  <!-- Idioma/Language -->
   <script>
     function showLanguage(lang) {
       const en = document.getElementById('content-en');

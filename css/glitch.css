@@ -1,0 +1,102 @@
+/* Glitch and Chromatic Aberration Styles */
+
+.profile-container {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3), 0 0 50px rgba(255, 0, 255, 0.3);
+
+    /* --- ADD THESE LINES TO CENTER THE IMAGE --- */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* display: block; is no longer needed with flexbox */
+    transition: transform 0.1s ease-in-out; /* Smooths the offset a bit */
+}
+
+/* Glitch Animation - Faster */
+.glitch {
+    animation: glitch-animation 0.2s steps(2, end) infinite;
+}
+
+@keyframes glitch-animation {
+    0% {
+        clip-path: inset(50% 0 30% 0);
+        transform: translate(-15px, -8px);
+    }
+    20% {
+        clip-path: inset(10% 0 55% 0);
+        transform: translate(15px, 8px);
+    }
+    40% {
+        clip-path: inset(70% 0 5% 0);
+        transform: translate(-8px, 15px);
+    }
+    60% {
+        clip-path: inset(30% 0 40% 0);
+        transform: translate(8px, -15px);
+    }
+    80% {
+        clip-path: inset(55% 0 20% 0);
+        transform: translate(-15px, 8px);
+    }
+    100% {
+        clip-path: inset(0);
+        transform: translate(0);
+    }
+}
+
+/* Chromatic Aberration Effect - More Intense */
+.chromatic-aberration::before,
+.chromatic-aberration::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%; 
+    mix-blend-mode: screen;
+    background-color: transparent;
+}
+
+.chromatic-aberration::before {
+    animation: chromatic-red 0.3s infinite alternate;
+}
+
+.chromatic-aberration::after {
+    animation: chromatic-blue 0.3s infinite alternate;
+}
+
+@keyframes chromatic-red {
+    0% {
+        transform: translate(6px, -3px);
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(-4px, 3px);
+        filter: hue-rotate(20deg);
+    }
+}
+
+@keyframes chromatic-blue {
+    0% {
+        transform: translate(-5px, 4px) scale(1.03);
+        filter: hue-rotate(240deg);
+    }
+    100% {
+        transform: translate(5px, -4px) scale(0.98);
+        filter: hue-rotate(260deg);
+    }
+}

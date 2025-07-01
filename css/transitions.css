@@ -1,0 +1,79 @@
+/* css/transitions.css */
+
+/* Prevent scrollbars during animation */
+body {
+    overflow-x: hidden;
+}
+
+/* A wrapper for the content that will be animated */
+.page-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+/* --- SLIDE OUT ANIMATIONS --- */
+
+.slide-out-left {
+    animation: slideOutLeft 0.5s forwards ease-in-out;
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.5s forwards ease-in-out;
+}
+
+/* --- SLIDE IN ANIMATIONS --- */
+
+.slide-in-right {
+    animation: slideInRight 0.5s forwards ease-in-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s forwards ease-in-out;
+}
+
+
+/* --- KEYFRAME DEFINITIONS --- */
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

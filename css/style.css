@@ -25,6 +25,11 @@ body {
   place-items: center;
   overflow-x: hidden;
   line-height: 1.4;
+  /* animation: fadeIn 1s ease-in-out; <-- REMOVE THIS LINE */
+}
+
+/* ADD THIS NEW CLASS */
+.initial-load {
   animation: fadeIn 1s ease-in-out;
 }
 
